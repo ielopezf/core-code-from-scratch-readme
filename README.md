@@ -36,4 +36,4 @@ That first language is part of what we call low level languages
 Low level languages are called that way because it's a low abstraction of machine language, it means that the language it's pretty close to machine language.
 In the other hand we have high level languages that are closer to the way we communicate, by that we mean that it has it's own rules and grammatic.
 
-This repository was created to save all the progress made during the course 
+
