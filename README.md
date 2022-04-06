@@ -11,7 +11,7 @@ In the first scenario we have a code that it's written in a compiled language, f
 In the other scenario we have a code that we want to run so we handle to the other person a copy ofthe code, with the help of a interpreter we translate a line and execute it and repeat the procces for each line until we reach the end of the code. 
 
 * Is Java compiled or interpreted, or both? 
-* 
+
 We can determine that Java is both a compiled and an interpreted language, it mainly depend on our execution environment. We use Java language to code, then a compiler create a file with bytecode, then that file it's going to be either translated by another compiler or it's going to be  executed by an interpreter.
 
 * Pseudocode exercise 
