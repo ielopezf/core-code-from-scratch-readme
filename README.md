@@ -19,9 +19,13 @@ We can determine that Java is both a compiled and an interpreted language, it ma
 
  START
 amount<--GET
+
 bitcoinReferenceInDollars<--GET
+
 bitcoinConvertion<-- amount/bitcoinReferenceInDollars
+
 PRINT bitcoinConvertion
+
 END
 
 * High and low level languages 
