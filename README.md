@@ -74,12 +74,28 @@ We'll substract from 2000 the power of two that it's close to it, the result wil
 
 We got the numbers that are going to have the value of 1, the ones we didn't use will remain as 0.
 
-| 11 | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
-| 0 | 0 | 1 | 1 | 1 | 1 | 0 | 1 | 0 | 0 | 0 | 0 |
+ 11 | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 
+ -- | -- | - | - | - | - | - | - | - | - | - | -
+ 0  | 0  | 1 | 1 | 1 | 1 | 0 | 1 | 0 | 0 | 0 | 0 
+
+
 
  2. Method 2:
 
 We can divide the number by two, the result will repeat the process until we reach 0 as the quotient, for each division will take note of the remainder because those are te digits that are our result
 
+Division | Quotient | Remainder
+-------- | -------- | --------
+2000/2   | 1000     | 0
+1000/2   | 500      | 0
+500/2    | 250      | 0
+250/2    | 125      | 0
+125/2    | 62       | 1
+62/2     | 31       | 0
+31/2     | 15       | 1
+15/2     | 7        | 1
+7/2      | 3        | 1
+3/2      | 1        | 1
+1/2      | 0        | 0
 
-
+now we take the remainders from bottom to top and that it's our convertion
