@@ -75,7 +75,6 @@ We'll substract from 2000 the power of two that it's close to it, the result wil
 We got the numbers that are going to have the value of 1, the ones we didn't use will remain as 0.
 
 | 11 | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
-
 | 0 | 0 | 1 | 1 | 1 | 1 | 0 | 1 | 0 | 0 | 0 | 0 |
 
  2. Method 2:
