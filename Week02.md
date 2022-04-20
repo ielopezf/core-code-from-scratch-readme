@@ -1,6 +1,12 @@
+  Thursday
+
 * Multiply exercise
+
 function multiply(a, b){
   var resultado = a * b;
   return resultado;
 }
+
+* ASCII Exercise
+
 
