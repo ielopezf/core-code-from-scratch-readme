@@ -74,3 +74,44 @@ var countBits = function(n) {
   }
 };
 ```
+3.Your order, please
+```Javascript
+function order(words){
+  // ...
+  
+  var final="";
+  const pivot= words.split(" ");
+  const pivot2= words.split(" ");
+  if(words=== "")
+    {
+      return "";
+    }
+   
+  else{
+    
+    var frase= pivot;
+    let pivotLen= pivot.length ;
+   for(let i=0; i<pivotLen ; i++){
+      console.log(pivot);
+      
+      let cont=1;
+      var result= pivot2[i].indexOf(cont);
+          
+      while(result == -1){
+        cont+=1;
+        result= pivot2[i].indexOf(cont);
+      }
+      if(result!= -1)
+      {frase[cont -1 ]= pivot2[i];
+       //delete pivot[i];
+        }
+      cont=1;
+   
+    }
+    
+    
+    final= frase.join(' ');
+    return final;
+  }
+}
+```
