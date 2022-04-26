@@ -57,3 +57,20 @@
 
   }
 ```
+2. Bit counting
+```Javascript
+var countBits = function(n) {
+  // Program Me
+  if(n >=0){
+    let pivot=n.toString(2);
+    var num=0;
+    for ( let char in pivot)
+      {
+        if( pivot[char]==1){
+          num+=1;
+        }
+      }
+    return num;
+  }
+};
+```
