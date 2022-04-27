@@ -52,6 +52,12 @@ function finalGrade (exam, projects) {
 # Wednesday
 * Holiday VIII - Duty Free exercise
 ```javascript
+function dutyFree(normPrice, discount, hol){
+  let discountPer= discount/100;
+  let discountFinal= normPrice*discountPer;
+  let result= hol/discountFinal;
+  return Math.floor(result);
+}
 ```
 * Twice As Old exercise
 ```javascript
