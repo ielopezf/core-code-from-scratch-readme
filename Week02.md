@@ -103,6 +103,14 @@ function validSpacing(s) {
 ```
 * Fake Binary exercise
 ```javascript
+function fakeBin(x){
+  let pivot= '';
+for( let i= 0; i < x.length ; i++){
+  if(x[i]<5){ pivot+= 0 ;}
+  else {pivot+= 1 ;}
+}
+  return pivot;
+}
 ```
 # Thursday
 * Remove All Exclamation Marks From The End Of Sentence exercise
