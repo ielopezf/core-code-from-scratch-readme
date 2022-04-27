@@ -1,8 +1,8 @@
 # core-code-from-scratch-readme
 
-## Week 01
 
-### Tuesday 
+
+## Tuesday 
 * Create an explanation about interpreted And Compiled programming Languages 
 
 For starters it's necessary to understand that most languages can have both but they tend to work better with one. Each one have their own ways to manipulate the written code in order to let the computer understand and process the code. To make ourselves clear of what it's the difference between them we'll use two scenarios to see the process. 
@@ -36,7 +36,7 @@ That first language is part of what we call low level languages
 Low level languages are called that way because it's a low abstraction of machine language, it means that the language it's pretty close to machine language.
 In the other hand we have high level languages that are closer to the way we communicate, by that we mean that it has it's own rules and grammatic.
 
-### Wednesday
+## Wednesday
 
 * Your date of birth in the matrix? exercise
 As we learned, in binary we only use 1's and 0's so we can use different methods to make the convertion od a decimal number into a binary one. First we need to know that every digit of a number has it's own weight and to determine the weight we number each position and we use it as an exponent and  we elevate a base 2 with the current exponent or position, the very last number has a position 0 which means that has a 2^0 weight 
@@ -99,3 +99,16 @@ Division | Quotient | Remainder
 1/2      | 0        | 0
 
 now we take the remainders from bottom to top and that it's our convertion
+
+##Thursday
+1. Bad code
+El código oirignal con comentarios:
+```javascript
+var cond = false;
+
+if ((cond = true)) {
+  console.log('The cond variable is true');
+} else {
+  console.log('The cond variable is false');
+}
+```
