@@ -100,7 +100,7 @@ Division | Quotient | Remainder
 
 now we take the remainders from bottom to top and that it's our convertion
 
-##Thursday
+## Thursday
 1. Bad code
 The given exercise was to find the error in the code, in order to write the answer the bad code will be commmented and then the solution will be written.
 ```javascript
@@ -120,5 +120,19 @@ if ((cond == true)) {
   console.log('The cond variable is true');
 } else {
   console.log('The cond variable is false');
+}
+```
+2. Bad code 2
+Solution:
+``` Javascript
+var n = 100;
+
+if (n == 100) {
+  console.log('This is a special number!');
+}
+else if (n < 1000 && n % 10 == 0 ) {
+  console.log('');
+} else {
+  console.log('Just a regular number');
 }
 ```
