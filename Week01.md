@@ -136,3 +136,9 @@ else if (n < 1000 && n % 10 == 0 ) {
   console.log('Just a regular number');
 }
 ```
+3. Print special numbers
+```javascript
+for(let num=0 ; num <100; num++){
+  if(num%2!=0){ console.log(num);}
+}
+```
