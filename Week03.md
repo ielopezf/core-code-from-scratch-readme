@@ -115,7 +115,4 @@ function order(words){
   }
 }
 ```
-* Student's Final Grade
-```javascript
 
-```
