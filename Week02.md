@@ -49,3 +49,32 @@ function finalGrade (exam, projects) {
   return result; // final grade
 }
 ```
+# Wednesday
+* Holiday VIII - Duty Free exercise
+```javascript
+```
+* Twice As Old exercise
+```javascript
+```
+* Valid Spacing exercise
+```javascript
+```
+* Fake Binary exercise
+```javascript
+```
+# Thursday
+* Remove All Exclamation Marks From The End Of Sentence exercise
+```javascript
+```
+
+* Vowel Remover exercise
+```javascript
+```
+
+* Rock Paper Scissors! exercise
+```javascript
+```
+
+* Persistent Bugger exercise
+```javascript
+```
