@@ -102,11 +102,21 @@ now we take the remainders from bottom to top and that it's our convertion
 
 ##Thursday
 1. Bad code
-El código oirignal con comentarios:
+The given exercise was to find the error in the code, in order to write the answer the bad code will be commmented and then the solution will be written.
 ```javascript
 var cond = false;
 
-if ((cond = true)) {
+if ((cond = true)) { // it's not making a comparison so, the conditional it's not responding
+  console.log('The cond variable is true');
+} else {
+  console.log('The cond variable is false');
+}
+```
+The solution to fix the bug:
+```javascript
+var cond = false;
+
+if ((cond == true)) {
   console.log('The cond variable is true');
 } else {
   console.log('The cond variable is false');
