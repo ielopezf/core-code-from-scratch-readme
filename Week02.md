@@ -61,6 +61,16 @@ function dutyFree(normPrice, discount, hol){
 ```
 * Twice As Old exercise
 ```javascript
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  // your code here
+  let doubleSonYears= sonYearsOld * 2;
+  //validate if it's already the double of his son's age
+  if(dadYearsOld==doubleSonYears ){ return 0;}
+  //otherwise, calculate how much it's going to be need to be twice his son's age
+  else{
+     return Math.abs(doubleSonYears-dadYearsOld);
+  }
+}
 ```
 * Valid Spacing exercise
 ```javascript
