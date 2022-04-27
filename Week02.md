@@ -74,6 +74,32 @@ function twiceAsOld(dadYearsOld, sonYearsOld) {
 ```
 * Valid Spacing exercise
 ```javascript
+function validSpacing(s) {
+  // write your code here
+  //verify if it's empty
+  let result= true;
+   var anteriorChar= s[0];
+    var actualChar='';
+  if(s == ''){ result= true; }
+  else if( s== ' '){ result= false;}
+  else{
+    //space it´s the first or last char
+    if( s.startsWith(' ') || s.endsWith(' ')){ result= false;}
+    else{
+     
+      for(let i=1; i< s.length; i++){
+        actualChar= s[i];
+        console.log(actualChar);
+        if( actualChar== ' ' && anteriorChar ==' '){
+          result= false; break; return result;}
+        anteriorChar= s[i];
+         console.log(anteriorChar);
+      }
+     
+    }
+  }
+   return result;
+}
 ```
 * Fake Binary exercise
 ```javascript
