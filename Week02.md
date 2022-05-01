@@ -134,6 +134,11 @@ function remove (string) {
 
 * Vowel Remover exercise
 ```javascript
+function shortcut (string) {
+  let newString=string.replace(/e|o|i|u|a/gi,'');
+  
+  return newString;
+}
 ```
 
 * Rock Paper Scissors! exercise
