@@ -116,3 +116,84 @@ function order(words){
 }
 ```
 
+# Thursday
+* Fold an array
+```javascript
+function reverseArray( array){
+  const reversedArray=[];
+  for( let i= array.length-1 ; i >=0; i--){
+    reversedArray.push(array[i]);
+  }
+  return reversedArray;
+}
+
+function sum( a1, a2){
+const sumArr=[];
+   for(let i=0; i<a1.length; i++){
+         //delete result[i];
+         let res=a1[i] + a2[i];
+      sumArr.push(res);
+      }
+  return sumArr;
+}
+
+function setResult(piv,short){
+  let b2= new Array();
+  let b3= new Array();
+  b2= reverseArray(piv);
+  b3= sum(b2, short);
+  return b3
+}
+
+function foldArray(array0, runs)
+{
+  console.log("\t START");
+  var result= [];//new Array();
+  //result=[];
+  const array= array0;
+  
+  console.log("first array: "+array);
+  const tama1= array.length;
+  const tama2= Math.floor(tama1/2);
+  let middle= array[tama2];
+  let pivot= array.slice(tama2);
+  let shortenedArray= array.splice(0, tama2);
+   if(tama1==1){return array;}
+  //repeat each run
+   
+  else{
+    const newRun=runs;
+    console.log( "\n runssss: "+newRun);
+    for(let n=runs; n>0 ; n--){
+      console.log("RUN:    "+n);
+      
+      console.log( "middle:"+ middle +" pivot:"+pivot+" short:"+shortenedArray);
+      
+      console.log("actual array: "+ array);
+      //verify if it's even
+      if(tama1%2 ==0){
+       
+       result= setResult(pivot,shortenedArray);
+       console.log(result);
+       
+     }
+    //otherwise it's odd
+      else {
+      //we reassigned to pivot a new array without the past first value
+      pivot= pivot.slice(1);
+      //we send pivot to a function that reverses the array
+       console.log("newpivot without 1: "+pivot);
+    
+    
+      result= setResult(pivot,shortenedArray);
+      //result= sum(shortenedArray, secondHalf);
+      result.push(middle);
+     //result= sumArrays(pivot, shortenedArray);
+      console.log("result run "+n +"\t "+result);
+        }
+     }
+    return result;
+    }
+  
+}
+```
