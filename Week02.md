@@ -147,4 +147,30 @@ function shortcut (string) {
 
 * Persistent Bugger exercise
 ```javascript
+function persistence(num) {
+   let pivot=num.toString().split('');
+  //pivot=num;
+  console.log("pivot: "+pivot);
+  let cont=0;
+    
+ 
+  
+   while( pivot.length>1){
+     let mult=1;
+     for(let n in pivot){
+      mult*= pivot[n];
+     console.log(mult);
+     
+    }
+      //console.log("mult"+mult +"cont:"+cont);
+     cont++;
+     console.log("mult"+mult +"cont:"+cont);
+    pivot=mult.toString().split('');
+     console.log(pivot);
+   }
+    
+    return cont;
+    
+  
+}
 ```
