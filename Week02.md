@@ -115,6 +115,21 @@ for( let i= 0; i < x.length ; i++){
 # Thursday
 * Remove All Exclamation Marks From The End Of Sentence exercise
 ```javascript
+function remove (string) {  
+ // let string = " hi! hi !!"
+  let pivot=string;
+  let bandera=string.endsWith('!');
+ 
+  for(let j= string.length-1; j>0; j--){
+    if(bandera==true){
+      pivot= string.slice(0,j);}
+     bandera= pivot.endsWith('!');
+   
+  }
+  
+  
+  return pivot;
+}
 ```
 
 * Vowel Remover exercise
