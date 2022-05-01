@@ -116,6 +116,52 @@ function order(words){
 }
 ```
 
+
+# Tuesday
+* Simple Pig Latin
+```javascript
+function pigIt(str){
+  //Code here
+  console.log(str);
+  var arrayWords= str.split(" ");
+  let word= "";
+  let newWord= new Array();
+  let first='';
+  for(let i=0;i<arrayWords.length; i++){
+    var char= ['.', ',','!','?'];
+    
+    word = arrayWords[i];
+    if(char.includes( word)){continue;}
+    newWord= word.split('');
+    first= word.charAt(0);
+    newWord.shift();
+    newWord[word.length-1]= first;
+    word= newWord.join('');
+    console.log(" word: "+word);
+    arrayWords[i]= word.concat("ay");
+  }
+  let newArray= arrayWords.join( " ");
+  return newArray; 
+  
+  
+}
+```
+* Counting Duplicates
+```javascript
+```
+* Decode The Morse Code 
+```javascript
+```
+# Wednesday
+* Valid Parentheses
+```javascript
+```
+* Convert String To Camel Case
+```javascript
+```
+* Unique In Order
+```javascript
+```
 # Thursday
 * Fold an array
 ```javascript
@@ -196,4 +242,7 @@ function foldArray(array0, runs)
     }
   
 }
+```
+* Encrypt This!
+```javascript
 ```
