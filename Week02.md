@@ -143,6 +143,15 @@ function shortcut (string) {
 
 * Rock Paper Scissors! exercise
 ```javascript
+const rps = (p1, p2) => {
+  var win=[ "scissors paper", "paper rock", "rock scissors"];
+  
+  var str= p1.concat(" ", p2);
+  
+  if(win.includes(str)== true){ return "Player 1 won!";}
+  else if(p1==p2){ return "Draw!";}
+  else{return "Player 2 won!";}
+};
 ```
 
 * Persistent Bugger exercise
