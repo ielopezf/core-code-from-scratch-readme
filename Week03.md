@@ -191,57 +191,81 @@ function setResult(piv,short){
   return b3
 }
 
-function foldArray(array0, runs)
-{
-  console.log("\t START");
-  var result= [];//new Array();
-  //result=[];
-  const array= array0;
+function foldArray(array, runs)
+{ console.log("\t\t START")
+ console.log("Original array: "+array);
+  let newArray= array;
+ console.log("Original new array"+ newArray);
+  let result= new Array();
+  let lengthArray= 0;//newArray.length;
+  let middleIndex= 0;//Math.floor(newArray.length/2);
+  let firstHalf= new Array();
+  let secondHalf= new Array();
+  array=0;
   
-  console.log("first array: "+array);
-  const tama1= array.length;
-  const tama2= Math.floor(tama1/2);
-  let middle= array[tama2];
-  let pivot= array.slice(tama2);
-  let shortenedArray= array.splice(0, tama2);
-   if(tama1==1){return array;}
-  //repeat each run
+
+  while(runs){
+    console.log("\n new run\t: "+runs)
    
-  else{
-    const newRun=runs;
-    console.log( "\n runssss: "+newRun);
-    for(let n=runs; n>0 ; n--){
-      console.log("RUN:    "+n);
+    lengthArray=newArray.length;
+    middleIndex= 0;
+    secondHalf=0;
+    result=0;
+        
+    if(lengthArray%2 != 0 && lengthArray!=1){
+      middleIndex= Math.floor(lengthArray/2);
+      secondHalf=newArray.slice(middleIndex+1);
       
-      console.log( "middle:"+ middle +" pivot:"+pivot+" short:"+shortenedArray);
+      let middle= newArray[middleIndex];
+     // firstHalf= newArray.splice(0, middleIndex );
+      firstHalf= newArray.slice(0, middleIndex );
+      console.log("first impar: "+firstHalf);
+      console.log("sec impar: "+secondHalf);
+      result= setResult(secondHalf,firstHalf);
       
-      console.log("actual array: "+ array);
-      //verify if it's even
-      if(tama1%2 ==0){
-       
-       result= setResult(pivot,shortenedArray);
-       console.log(result);
-       
-     }
-    //otherwise it's odd
-      else {
-      //we reassigned to pivot a new array without the past first value
-      pivot= pivot.slice(1);
-      //we send pivot to a function that reverses the array
-       console.log("newpivot without 1: "+pivot);
-    
-    
-      result= setResult(pivot,shortenedArray);
-      //result= sum(shortenedArray, secondHalf);
       result.push(middle);
-     //result= sumArrays(pivot, shortenedArray);
-      console.log("result run "+n +"\t "+result);
-        }
-     }
-    return result;
+      newArray= 0;
+      newArray= result;
+      console.log("newArray: "+newArray);
+      console.log( "res: "+result);
+      console.log("mid: "+middle+"\n");
+      newArray= 0;
+    newArray= result;
     }
+    else if( lengthArray==1){
+      result= newArray;
+      console.log("Arreglo de 1: "+result);
+      newArray= 0;
+    newArray= result;
+      break;
+    }
+    else{
+      middleIndex= Math.floor(lengthArray/2);
+      secondHalf=newArray.slice(middleIndex);
+      console.log("sec: "+secondHalf);
+      firstHalf= newArray.slice(0, middleIndex );
+      console.log("first: "+firstHalf);
+      result= setResult(secondHalf,firstHalf);
+      console.log("newArray: "+newArray);
+      console.log( "res: "+result);
+      newArray= 0;
+    newArray= result;
+    }
+    
+    runs--;
+  }
+  
+ let newResult= result;
+ result=0;
+ array=0;
+ console.log( array);
+ console.log( result);
+ console.log("\t\t END");
+  return newResult;
+ 
   
 }
+
 ```
 * Encrypt This!
 ```javascript
