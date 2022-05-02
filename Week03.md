@@ -245,4 +245,40 @@ function foldArray(array0, runs)
 ```
 * Encrypt This!
 ```javascript
+var encryptThis = function(text) {
+  // Implement me! :)
+  
+  var arrayWords= text.split(' ');
+  var firstLetter= '';
+  var lastLetter='';
+  var secondLetter='';
+  
+  var result='';
+  for(let i=0; i< arrayWords.length; i++){
+    console.log("\t START FOR");
+   console.log("word: "+arrayWords[i]);
+    console.log(arrayWords[i].length);
+    let actualWord=arrayWords[i];
+    let wordArray=actualWord.split('');
+    
+    firstLetter= actualWord.charCodeAt(0);
+    wordArray[0]=firstLetter;
+   
+    if( actualWord.length>2){
+      secondLetter= actualWord.charAt(1);
+      lastLetter=actualWord.charAt(actualWord.length -1 );
+      wordArray[wordArray.length-1]=secondLetter;
+      wordArray[1]=lastLetter;
+    }
+    
+    console.log( "first: "+firstLetter+"second: "+secondLetter+"third: "+lastLetter);
+    
+    
+    
+    arrayWords[i]= wordArray.join('');
+    console.log("new word:\t"+arrayWords[i]);
+  }
+  result= arrayWords.join(" ");
+  return result;
+}
 ```
