@@ -92,7 +92,6 @@ function order(words){
     var frase= pivot;
     let pivotLen= pivot.length ;
    for(let i=0; i<pivotLen ; i++){
-      console.log(pivot);
       
       let cont=1;
       var result= pivot2[i].indexOf(cont);
@@ -122,7 +121,7 @@ function order(words){
 ```javascript
 function pigIt(str){
   //Code here
-  console.log(str);
+
   var arrayWords= str.split(" ");
   let word= "";
   let newWord= new Array();
@@ -137,7 +136,6 @@ function pigIt(str){
     newWord.shift();
     newWord[word.length-1]= first;
     word= newWord.join('');
-    console.log(" word: "+word);
     arrayWords[i]= word.concat("ay");
   }
   let newArray= arrayWords.join( " ");
@@ -192,10 +190,8 @@ function setResult(piv,short){
 }
 
 function foldArray(array, runs)
-{ console.log("\t\t START")
- console.log("Original array: "+array);
+{
   let newArray= array;
- console.log("Original new array"+ newArray);
   let result= new Array();
   let lengthArray= 0;//newArray.length;
   let middleIndex= 0;//Math.floor(newArray.length/2);
@@ -205,7 +201,6 @@ function foldArray(array, runs)
   
 
   while(runs){
-    console.log("\n new run\t: "+runs)
    
     lengthArray=newArray.length;
     middleIndex= 0;
@@ -219,22 +214,17 @@ function foldArray(array, runs)
       let middle= newArray[middleIndex];
      // firstHalf= newArray.splice(0, middleIndex );
       firstHalf= newArray.slice(0, middleIndex );
-      console.log("first impar: "+firstHalf);
-      console.log("sec impar: "+secondHalf);
       result= setResult(secondHalf,firstHalf);
       
       result.push(middle);
       newArray= 0;
       newArray= result;
       console.log("newArray: "+newArray);
-      console.log( "res: "+result);
-      console.log("mid: "+middle+"\n");
       newArray= 0;
     newArray= result;
     }
     else if( lengthArray==1){
       result= newArray;
-      console.log("Arreglo de 1: "+result);
       newArray= 0;
     newArray= result;
       break;
@@ -242,12 +232,8 @@ function foldArray(array, runs)
     else{
       middleIndex= Math.floor(lengthArray/2);
       secondHalf=newArray.slice(middleIndex);
-      console.log("sec: "+secondHalf);
       firstHalf= newArray.slice(0, middleIndex );
-      console.log("first: "+firstHalf);
       result= setResult(secondHalf,firstHalf);
-      console.log("newArray: "+newArray);
-      console.log( "res: "+result);
       newArray= 0;
     newArray= result;
     }
@@ -258,9 +244,7 @@ function foldArray(array, runs)
  let newResult= result;
  result=0;
  array=0;
- console.log( array);
- console.log( result);
- console.log("\t\t END");
+ 
   return newResult;
  
   
@@ -279,9 +263,7 @@ var encryptThis = function(text) {
   
   var result='';
   for(let i=0; i< arrayWords.length; i++){
-    console.log("\t START FOR");
-   console.log("word: "+arrayWords[i]);
-    console.log(arrayWords[i].length);
+   
     let actualWord=arrayWords[i];
     let wordArray=actualWord.split('');
     
@@ -295,12 +277,9 @@ var encryptThis = function(text) {
       wordArray[1]=lastLetter;
     }
     
-    console.log( "first: "+firstLetter+"second: "+secondLetter+"third: "+lastLetter);
-    
-    
-    
+   
     arrayWords[i]= wordArray.join('');
-    console.log("new word:\t"+arrayWords[i]);
+    
   }
   result= arrayWords.join(" ");
   return result;
