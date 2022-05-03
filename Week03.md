@@ -210,6 +210,18 @@ decodeMorse = function(morseCode){
 ```
 * Convert String To Camel Case
 ```javascript
+function toCamelCase(str){
+  console.log(str);
+let arrayWords= str.split(/-|_/gi);
+  console.log(arrayWords);
+  for(let i=1; i< arrayWords.length; i++){
+    let actualWord=arrayWords[i].split('');
+    actualWord[0]= actualWord[0].toUpperCase();
+    arrayWords[i]= actualWord.join('');
+  }
+  
+  return arrayWords.join('');
+}
 ```
 * Unique In Order
 ```javascript
