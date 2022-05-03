@@ -207,6 +207,35 @@ decodeMorse = function(morseCode){
 # Wednesday
 * Valid Parentheses
 ```javascript
+ function isEmptyP( par){
+   let res= false;
+   if(par==''){ res= true;}
+   return res;
+ }
+function validParentheses(parens) {
+  // your code here ..
+  console.log("par"+parens);
+  let result= false;
+  let pivot= parens.replace( "()" , '').replace(' ', '');;
+  console.log("piv"+pivot);
+  //verify that it's not empty
+  if( isEmptyP(parens )==false){ 
+     
+   for(let i=0; i< parens.length; i++){
+     //we are "deleting" the pair of parentesis 
+      pivot= pivot.replace( "()" , '');
+      
+    }
+
+   
+  }
+ if( isEmptyP(pivot) ==true || isEmptyP(parens )==true){
+      result=true;}
+  //  return true;
+  
+  
+  return result;
+}
 ```
 * Convert String To Camel Case
 ```javascript
