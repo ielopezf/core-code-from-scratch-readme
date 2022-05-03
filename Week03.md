@@ -149,6 +149,29 @@ function pigIt(str){
 ```
 * Decode The Morse Code 
 ```javascript
+decodeMorse = function(morseCode){
+  //your code here
+  //remove spaces from start and end
+  morseCode= morseCode.trim();
+  //save each set word
+  let morseCodeWords= morseCode.split("   ");
+  //create pivots
+  let codeWords= new Array();
+  let decodeAnswer= new Array();
+  for(let i=0; i<morseCodeWords.length; i++){
+    //we're inside a for that let us check each word
+    let actualWord= morseCodeWords[i].split(" ");
+    let decodeWord= "";
+
+    for(let j= 0; j< actualWord.length; j++){
+      decodeWord+= MORSE_CODE[actualWord[j]];
+    }
+    decodeAnswer[i]= decodeWord;
+  }
+  
+  
+  return decodeAnswer.join(" ");
+}
 ```
 # Wednesday
 * Valid Parentheses
