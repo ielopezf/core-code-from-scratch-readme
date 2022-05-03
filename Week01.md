@@ -101,6 +101,7 @@ Division | Quotient | Remainder
 now we take the remainders from bottom to top and that it's our convertion
 
 * MIPS
+1. Print name
  ``` Javascript
    .data
         name: .asciiz "\nElena Lopez\n"
@@ -110,7 +111,44 @@ now we take the remainders from bottom to top and that it's our convertion
               la $a0, name
               syscall
    ```
-   
+  2. Sum two numbers
+  ```Javascript
+  .data
+	      number1: .asciiz "\nIngrese el primer numero: "
+	      number2: .asciiz "\nIngrese el segundo numero: "
+	      result: .asciiz "\nResultado: "
+  .text
+	      main:
+	      # ask number 1
+              li $v0, 4
+              la $a0, number1
+              syscall
+
+              li $v0, 5
+              syscall
+
+              move $t0, $v0
+		# ask number 2
+              li $v0, 4
+              la $a0, number2
+              syscall
+
+              li $v0, 5
+              syscall
+
+              move $t1, $v0
+              # sum both numbers
+              add $t2, $t0, $t1
+              #assign result
+              li $v0, 4
+              la $a0, result
+              syscall
+              #print number
+              li $v0, 1
+              move $a0, $t2
+              syscall
+  ```
+        
 ## Thursday
 1. Bad code
 The given exercise was to find the error in the code, in order to write the answer the bad code will be commmented and then the solution will be written.
