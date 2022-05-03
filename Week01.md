@@ -100,6 +100,16 @@ Division | Quotient | Remainder
 
 now we take the remainders from bottom to top and that it's our convertion
 
+* MIPS
+ ``` Javascript
+   .data
+        name: .asciiz "\nElena Lopez\n"
+  .text
+        main:
+              li $v0, 4
+              la $a0, name
+              syscall
+              ```
 ## Thursday
 1. Bad code
 The given exercise was to find the error in the code, in order to write the answer the bad code will be commmented and then the solution will be written.
