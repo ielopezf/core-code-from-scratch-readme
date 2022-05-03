@@ -213,6 +213,26 @@ decodeMorse = function(morseCode){
 ```
 * Unique In Order
 ```javascript
+var uniqueInOrder=function(iterable){
+
+  let arrayChar= new Array();
+  
+  if(iterable.length ==0 ){ arrayChar=[];}
+  else{
+    arrayChar.push(iterable[0]);
+    for(let i= 0; i<iterable.length-1 ; i++){
+    
+    if(iterable[i]!=iterable[i+1]){ 
+    
+    arrayChar.push(iterable[i+1]);
+    }
+    
+  }}
+  
+  
+  return arrayChar;//...
+}
+
 ```
 # Thursday
 * Fold an array
