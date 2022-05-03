@@ -146,6 +146,37 @@ function pigIt(str){
 ```
 * Counting Duplicates
 ```javascript
+function duplicateCount(text){
+  /*We'r egoing to return a number thah indicates the quantity of 
+  characters that were repeated inside the string*/
+  let orderingPivot= text.toUpperCase().split('').sort();
+
+  let result=0;
+
+  let saveRepeatedChar= new Array();
+  let word=0;
+
+  for(let i= 0; i<orderingPivot.length ; i++){
+    let count=1;
+    
+    if(orderingPivot[i]==orderingPivot[i+1] ){ 
+     word+=1;
+    }
+    
+    else{ 
+      word+=1; 
+      saveRepeatedChar.push(word); // we're adding the number of occurrences
+      word= 0;
+        }
+
+  }
+  
+  for( let j=0; j<saveRepeatedChar.length; j++ ){
+    if(saveRepeatedChar[j]> 1){result++;} //if the number of ocurrecnes is at least 2 we're adding to result
+  }
+  
+  return result;//...
+}
 ```
 * Decode The Morse Code 
 ```javascript
