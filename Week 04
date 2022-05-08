@@ -1,0 +1,18 @@
+# Thursday
+```javascript
+function stringClean(s){
+  //replace each number that it's in the range 0-9
+  let result= s.replace(/[0-9]/g, "")
+  return result
+  // Function will return the cleaned string
+}
+
+```
+
+```javascript
+function getNumberFromString(s) {
+  //replace all characters different from 0-9
+  let n=s.replace(/[^0-9]+/g, '')
+  return Number(n);
+}
+```
